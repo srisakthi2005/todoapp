@@ -48,16 +48,16 @@ dotenv.config();
 
 const app = express();
 
-// app.use(cors());
-app.use(
-  cors({
-    origin: [
-      "http://localhost:5173",
-      "https://todoapp-alpha-topaz.vercel.app",
-    ],
-    credentials: true,
-  })
-);
+app.use(cors());
+// app.use(
+//   cors({
+//     origin: [
+//       "http://localhost:5173",
+//       "https://todoapp-alpha-topaz.vercel.app",
+//     ],
+//     credentials: true,
+//   })
+// );
 app.use(express.json());
 
 const mongoUri = process.env.MONGO_URI;
